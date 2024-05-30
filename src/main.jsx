@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Search from "./screens/search.jsx";
 import { ModalProvider } from "./components/modal";
 import { useModal } from "./contexts/Modal";
+import App from "./App";
 
 // Create a client
 const queryClient = new QueryClient();
@@ -23,8 +24,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <QueryClientProvider client={queryClient}>
       <ModalProvider>
         <>
-          <Button />
-          <Search />
+          <App/>
         </>
       </ModalProvider>
     </QueryClientProvider>
