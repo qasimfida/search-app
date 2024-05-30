@@ -75,7 +75,7 @@ function App() {
                 <h3 className="text-3xl font-bold">
                     Color Search
                 </h3>
-
+                
                 <form onSubmit={onSearch}>
                     <div className="flex relative rounded-md w-full max-w-xl">
                         <input type="text" name="q" id="query" placeholder="Color Code (e.g. 3R3)"
