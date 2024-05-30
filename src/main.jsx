@@ -18,7 +18,7 @@ function initSearchLib(rootElement = document.getElementById('searchLib')) {
     <React.StrictMode>
       <QueryClientProvider client={queryClient}>
           <ModalProvider>
-            <Button/>
+            <Button />
             <Search />
           </ModalProvider>
       </QueryClientProvider>
@@ -29,7 +29,7 @@ function initSearchLib(rootElement = document.getElementById('searchLib')) {
 const Button = () => {
   const {openModal} = useModal()
   return (
-    <button onClick={() => openModal(true)}>HEllo</button>
+    <button id='searchLibBtn' onClick={() => openModal(true)}>HEllo</button>
   )
 }
 // if in development mode, render immediately
