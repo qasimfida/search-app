@@ -12,9 +12,14 @@ import { useModal } from './contexts/Modal';
 
 // Create a client
 const queryClient = new QueryClient()
+const Button = () => {
+  const {openModal} = useModal()
+  return (
+    <button id='searchLibBtn' onClick={() => openModal(true)}>HEllo</button>
+  )
+}
 
-function initSearchLib(rootElement = document.getElementById('searchLib')) {
-  ReactDOM.createRoot(rootElement).render(
+  ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
       <QueryClientProvider client={queryClient}>
           <ModalProvider>
@@ -24,18 +29,8 @@ function initSearchLib(rootElement = document.getElementById('searchLib')) {
       </QueryClientProvider>
     </React.StrictMode>,
   )
-}
 
-const Button = () => {
-  const {openModal} = useModal()
-  return (
-    <button id='searchLibBtn' onClick={() => openModal(true)}>HEllo</button>
-  )
-}
-// if in development mode, render immediately
-if (import.meta.env.DEV) {
-  initSearchLib()
-}
 
-window.initSearchLib = initSearchLib;
+
+
 
